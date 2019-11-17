@@ -14,7 +14,7 @@
                 <a class="nav-link" id="home-enjoy" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/main">Message</a>
+                <a class="nav-link" href="/messages">Message</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/masterlist">Choose Master</a>
@@ -30,7 +30,7 @@
                     MASTER
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/masterEdit">
+                    <a class="dropdown-item" href="/masterCreate">
                         Create Profile
                     </a>
                     <a class="dropdown-item" href="#">test</a>

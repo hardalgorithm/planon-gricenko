@@ -19,9 +19,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" enctype="multipart/form-data">
+                        <form method="post" action="/masterEdit" enctype="multipart/form-data">
                             <div class='form-group'>
-                                <label class='col-md-4 control-label' for='textinput'>Имя</label>
+                                <label class='col-md-4 control-label' for='textinput'>FirstName</label>
                                 <div>
                                     <input class='form-control input-md' id='textinput' name='firstName'
                                            style='cursor: auto'
@@ -30,7 +30,7 @@
                             </div>
 
                             <div class='form-group'>
-                                <label class='col-md-4 control-label' for='textinput'>Фамилия</label>
+                                <label class='col-md-4 control-label' for='textinput'>LastName</label>
                                 <div>
                                     <input class='form-control input-md' id='textinput' name='lastName'
                                            style='cursor: auto'
@@ -48,7 +48,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class='col-md-4 control-label' for='prependedtext'>Тел.</label>
+                                <label class='col-md-4 control-label' for='prependedtext'>Phone.</label>
                                 <div>
                                     <div class='input-group'>
                                         <span class='input-group-addon'>+380-</span>

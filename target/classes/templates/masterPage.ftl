@@ -12,6 +12,7 @@
 
 
     <div>Список </div>
+    <div class="row">
     <div class="card-columns">
 
         <aside class="profile-card">
@@ -43,7 +44,7 @@
             </aside>
         </aside>
     </div>
-
+    </div>
 <#--    test-->
     <#if !isMaster>
         <div>

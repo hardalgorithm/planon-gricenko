@@ -51,14 +51,14 @@ public class MasterController {
         return "masterPage";
     }
 
-    @GetMapping("/masterEdit")
+    @GetMapping("/masterCreate")
     public String userEditForm(
              Model model
     ){
         Iterable<Master> masters = masterRepo.findAll();
         model.addAttribute("masters",masters);
 
-        return "masterEdit";
+        return "masterCreate";
     }
 
     @PostMapping(value = "/master/{master}")

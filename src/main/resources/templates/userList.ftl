@@ -7,7 +7,7 @@
     <tr>
         <th>Name</th>
         <th>Role</th>
-        <th>Phone</th>
+
     </tr>
     </thead>
     <tbody>
