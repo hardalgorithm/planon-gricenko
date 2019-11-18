@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>PlanOn</title>
     <link rel="stylesheet" href="/static/style.css">
 
 

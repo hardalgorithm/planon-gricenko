@@ -110,21 +110,33 @@
         <tbody>
         <tr>
 
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>GET</td>
+            <td><a href="/masterlist.ftl">/masterlist</a></td>
+            <td>Get all masters data, access for users/admins</td>
         </tr>
         <tr>
 
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>GET</td>
+            <td>/master/{id}</td>
+            <td>Get account data with specified id</td>
         </tr>
         <tr>
 
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>GET</td>
+            <td><a href=/masterCreate.ftl">/masterCreate</a></td>
+            <td>Get form masters data, access for masters</td>
+        </tr>
+        <tr>
+
+            <td>POST</td>
+            <td>/master/{id}</td>
+            <td>Create new message data for concrete master</td>
+        </tr>
+        <tr>
+
+            <td>POST</td>
+            <td>/masterEdit</td>
+            <td>Create account master</td>
         </tr>
         </tbody>
     </table>

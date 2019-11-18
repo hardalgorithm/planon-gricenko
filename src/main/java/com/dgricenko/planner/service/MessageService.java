@@ -4,6 +4,7 @@ import com.dgricenko.planner.domain.Message;
 import com.dgricenko.planner.repository.MessageRepo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class MessageService {
@@ -31,4 +32,6 @@ public class MessageService {
         messageRepo.save(messageFromDb);
         return true;
     }
+
+
 }

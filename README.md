@@ -33,7 +33,7 @@
  Method	| Path	| Description	
  --- | --- | --- |
  GET	| /masterlist	| Get all masters data, access for users/admins 
- GET    | /masterCreate | Get all masters data, access for masters  
+ GET    | /masterCreate | Get form masters data, access for masters  
  GET	| /master/{id}	| Get account data with specified  id	
  POST	| /master/{id}	| Create new message data for concrete master  
  POST   | /masterEdit   | Create account master 

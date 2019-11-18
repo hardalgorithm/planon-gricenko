@@ -15,11 +15,12 @@
                             <img src="/img/${master.photo}">
                         </a>
                     </#if>
-                    <h1>${master.firstName} ${master.lastName}</h1>
-                    <h2>${master.phone}</h2>
+
                 </header>
 
                 <div class="profile-bio">
+                    <h4>${master.firstName} ${master.lastName}</h4>
+                    <h5>${master.phone}</h5>
                     <p>${master.description}</p>
                 </div>
 
@@ -27,7 +28,7 @@
                 <ul class="profile-social-links">
                     <li>
                         <a href="https://${master.socialLink}" target="_blank">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+                            #socilLink
                         </a>
                     </li>
 

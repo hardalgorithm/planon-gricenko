@@ -12,7 +12,7 @@
 
 
     <div>Список </div>
-    <div class="row">
+
     <div class="card-columns">
 
         <aside class="profile-card">
@@ -23,11 +23,12 @@
                             <img src="/img/${master.photo}">
                         </a>
                     </#if>
-                    <h1>${master.firstName} ${master.lastName}</h1>
-                    <h2>${master.phone}</h2>
+
                 </header>
 
                 <div class="profile-bio">
+                    <h4>${master.firstName} ${master.lastName}</h4>
+                    <h5>${master.phone}</h5>
                     <p>${master.description}</p>
                 </div>
 
@@ -35,7 +36,7 @@
                 <ul class="profile-social-links">
                     <li>
                         <a href="https://${master.socialLink}" target="_blank">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+                            #socialLink
                         </a>
                     </li>
 
@@ -44,16 +45,16 @@
             </aside>
         </aside>
     </div>
-    </div>
+
 <#--    test-->
     <#if !isMaster>
         <div>
-            <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Добавить заявку</button>
+            <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add task</button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Регистрация заявки</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Task registration</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -61,7 +62,7 @@
                         <div class="modal-body">
                             <form method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Укажите дату/время:</label>
+                                    <label for="message-text" class="col-form-label">Enter date/time:</label>
                                     <input id="input" width="234" name="date"/>
                                     <script>
                                         $('#input').datetimepicker({
@@ -73,13 +74,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Комментарий:</label>
-                                    <textarea class="form-control" id="message-text" name="comment" placeholder="Введите ваши пожелания.."></textarea>
+                                    <label for="message-text" class="col-form-label">Comment:</label>
+                                    <textarea class="form-control" id="message-text" name="comment" placeholder="Enter your wish.."></textarea>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                                    <button type="submit" class="btn btn-primary" onclick="testAlert()">Добавить</button>
+                                    <button type="submit" class="btn btn-primary" onclick="testAlert()">Add</button>
                                     <script>
                                         function testAlert() {
                                             alert("Great, ${name}! Wait for confirmation from the Master.");
@@ -96,8 +97,11 @@
     </#if>
 <#--    end test-->
 
-    <div>Список заявок</div>
-    <div class="card-columns">
+
+
+    <div>Task List</div>
+
+    <div class="card-columns"/>
 
     <#list messages as message>
 
@@ -115,7 +119,7 @@
                         Click to show/hide.
                     </a>
                 </#if>
-                <div><span>${message.comment}</span></div>
+                <div class="form-comment"><span>${message.comment}</span></div>
             </div>
             <div class="card-footer text-muted">
                 ${message.authorName}

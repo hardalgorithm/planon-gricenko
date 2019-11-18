@@ -24,16 +24,22 @@ private MessageRepo messageRepo;
     public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
-        if (filter!= null && !filter.isEmpty()) {
-            messages = messageRepo.findByComment(filter);
-        }else {
-            messages = messageRepo.findAll();
-        }
+        messages = getSearchComment(filter);
 
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
 
         return "messages";
+    }
+
+    private Iterable<Message> getSearchComment(@RequestParam(required = false, defaultValue = "") String filter) {
+        Iterable<Message> messages;
+        if (filter!= null && !filter.isEmpty()) {
+            messages = messageRepo.findByComment(filter);
+        }else {
+            messages = messageRepo.findAll();
+        }
+        return messages;
     }
 
     @PostMapping("/messageDelete/{message}")

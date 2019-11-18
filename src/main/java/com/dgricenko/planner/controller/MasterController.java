@@ -5,6 +5,7 @@ import com.dgricenko.planner.domain.Message;
 import com.dgricenko.planner.domain.User;
 import com.dgricenko.planner.repository.MasterRepo;
 import com.dgricenko.planner.repository.MessageRepo;
+import com.dgricenko.planner.service.MasterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -28,10 +29,8 @@ public class MasterController {
  private MasterRepo masterRepo;
  @Autowired
  private MessageRepo messageRepo;
-
-    @Value("${upload.path}")//search in app.properties this path(add to MvcConfig too!)
-    private String uploadPath;
-
+ @Autowired
+ private MasterService masterService;
 
 
     @GetMapping("/masterlist")
@@ -46,6 +45,7 @@ public class MasterController {
                              Model model){
 
         Iterable<Message> messages = messageRepo.findByMaster(master);
+
         model.addAttribute("master",master);
         model.addAttribute("messages", messages);
         return "masterPage";
@@ -75,7 +75,7 @@ public class MasterController {
 
         model.addAttribute("messages", messages);
 
-        return "redirect:/main";
+        return "redirect:/messages";
     }
 
     @PostMapping("/masterEdit")
@@ -90,23 +90,13 @@ public class MasterController {
                       @RequestParam("photo") MultipartFile file) throws IOException {
         Master master = new Master(firstName,lastName,description,phone,socialLink);
 
-        if (file != null && !file.getOriginalFilename().isEmpty()){
-            File uploadDir = new File(uploadPath);
+        masterService.savePhoto(file,master);
 
-            if (!uploadDir.exists()){
-                uploadDir.mkdir();
-            }
-            String uuidFile = UUID.randomUUID().toString();//
-            String resultFileName =file.getOriginalFilename();
-
-            file.transferTo(new File(uploadPath + "/" + resultFileName));
-
-            master.setPhoto(resultFileName);
-        }
 
         masterRepo.save(master);
 
 
         return "redirect:/masterlist";
     }
+
 }
