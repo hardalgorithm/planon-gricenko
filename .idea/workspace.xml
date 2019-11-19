@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a2ea231-ac6f-4f4f-9115-2625086a8493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/MasterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/MasterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dgricenko/planner/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/controller/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/MasterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/MasterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dgricenko/planner/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/masterPage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/masterPage.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,8 +132,16 @@
       <workItem from="1573983581553" duration="15000" />
       <workItem from="1574071467579" duration="7030000" />
       <workItem from="1574147295319" duration="191000" />
-      <workItem from="1574156421827" duration="1325000" />
+      <workItem from="1574156421827" duration="1832000" />
     </task>
+    <task id="LOCAL-00001" summary="add .gitattr">
+      <created>1574157931720</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574157931720</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,5 +159,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add .gitattr" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitattr" />
   </component>
 </project>
