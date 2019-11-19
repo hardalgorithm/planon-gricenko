@@ -33,5 +33,13 @@ public class MessageService {
         return true;
     }
 
-
+    public Iterable<Message> getSearchComment(@RequestParam(required = false, defaultValue = "") String filter) {
+        Iterable<Message> messages;
+        if (filter!= null && !filter.isEmpty()) {
+            messages = messageRepo.findByComment(filter);
+        }else {
+            messages = messageRepo.findAll();
+        }
+        return messages;
+    }
 }

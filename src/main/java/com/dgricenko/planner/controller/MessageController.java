@@ -22,9 +22,8 @@ private MessageRepo messageRepo;
 
     @GetMapping("/messages")
     public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
-        Iterable<Message> messages = messageRepo.findAll();
-
-        messages = getSearchComment(filter);
+        Iterable<Message> messages;
+        messages = messageService.getSearchComment(filter);
 
         model.addAttribute("messages", messages);
         model.addAttribute("filter", filter);
@@ -32,15 +31,6 @@ private MessageRepo messageRepo;
         return "messages";
     }
 
-    private Iterable<Message> getSearchComment(@RequestParam(required = false, defaultValue = "") String filter) {
-        Iterable<Message> messages;
-        if (filter!= null && !filter.isEmpty()) {
-            messages = messageRepo.findByComment(filter);
-        }else {
-            messages = messageRepo.findAll();
-        }
-        return messages;
-    }
 
     @PostMapping("/messageDelete/{message}")
     public String deleteMessage(@PathVariable Message message) {

@@ -4,6 +4,7 @@ package com.dgricenko.planner.controller;
 import com.dgricenko.planner.domain.Role;
 import com.dgricenko.planner.domain.User;
 import com.dgricenko.planner.repository.UserRepo;
+import com.dgricenko.planner.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,8 @@ import java.util.stream.Collectors;
 public class UserController {
     @Autowired
     private UserRepo userRepo;
+    @Autowired
+   private UserService userService;
 
     @GetMapping
     public String userList(Model model){
@@ -43,18 +46,7 @@ public class UserController {
 
         user.setUsername(username);
 
-        Set<String> roles = Arrays.stream(Role.values())
-                .map(Role::name)
-                .collect(Collectors.toSet());
-
-        user.getRoles().clear();
-
-        for (String key:
-             form.keySet()) {
-            if (roles.contains(key)){
-                user.getRoles().add(Role.valueOf(key));
-            }
-        }
+        userService.getChangeRole(form,user);
 
         userRepo.save(user);
 

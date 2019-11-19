@@ -119,7 +119,7 @@
                         Click to show/hide.
                     </a>
                 </#if>
-                <div><span>${message.comment}</span></div>
+                <div class="form-comment"><span>${message.comment}</span></div>
             </div>
             <div class="card-footer text-muted">
                 ${message.authorName}

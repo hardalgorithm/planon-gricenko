@@ -35,7 +35,7 @@ public class MasterService {
                 uploadDir.mkdir();
             }
             String uuidFile = UUID.randomUUID().toString();//
-            String resultFileName =file.getOriginalFilename()+uuidFile;
+            String resultFileName =uuidFile+file.getOriginalFilename();
 
             file.transferTo(new File(uploadPath + "/" + resultFileName));
 
